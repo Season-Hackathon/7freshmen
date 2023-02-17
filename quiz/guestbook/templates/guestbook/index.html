@@ -1,0 +1,23 @@
+ sorigin="anonymous">
+        <style>
+            .container{
+                background-color:  #e6e6e6;
+                margin-bottom: 50px;
+                
+                padding: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class='container'>
+            <h1>Guest Book</h1>
+            <a href="{%url 'guestbook' %}">sign the guest book</a>
+        </div>
+        {% for c in comments %}
+        <div class='container'>
+            <h2>{{ c.name }}</h2>
+            <p>{{ c.comment }}</p>
+        </div>
+        {% endfor %}
+    </body>
+</html>
